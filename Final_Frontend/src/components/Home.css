@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 10px 20px; 
+}
+
+.vector-designs {
+    position: relative;    
+}
+
+.vector-designs .circle1 {
+    position: absolute;
+    top: 90%;
+    left: -300px;
+    width: 450px;
+    height: 500px;
+    background: linear-gradient(to right, #8e44ad, #3e2847);
+    border-radius: 50%;
+    opacity: 0.4;
+    overflow: hidden;
+}
+
+.vector-designs .circle2 {
+    position: absolute;
+    top: 100px;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, #8e44ad, #3e2847);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+
+h1 {
+    margin-top: 10; 
+    margin-bottom: 5px; 
+}
+
+p {
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+}
+
+button {
+    margin-top: 10px; 
+}
+
+.order-1, .order-2 {
+    margin-bottom: 20px; 
+}
+
+footer {
+    margin-top: 30px; 
+    padding: 10px; 
+    text-align: center;
+}
+
