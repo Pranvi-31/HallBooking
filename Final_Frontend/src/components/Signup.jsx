@@ -26,7 +26,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`${server}/api/users/signup`, {
+      const res = await axios.post(`https://hallbooking-wk3r.onrender.com/api/users/signup`, {
         name,
         email,
         password,
