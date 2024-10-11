@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from '../context/AuthContext';
 import './Home.css'; 
 import './customStyles.css';
-import { server } from '../App'; 
+
 
 
 const AddBooking = () => {
@@ -30,7 +30,7 @@ const AddBooking = () => {
 
         try {
             await axios.post(
-                `${server}/api/bookings`,
+                `https://hallbooking-wk3r.onrender.com/api/bookings`,
                 { hall, date, slot: `${startTime}-${endTime}`, notes },
                 {
                     headers: {

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from '../context/AuthContext';
 import './Home.css'; 
 import hallLogo from "../assets/hall-logo.svg";
-import { server } from '../App'; 
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,7 +20,7 @@ const Login = () => {
     setMessage("");
 
     try {
-      const res = await axios.post(`${server}/api/users/login`, { email, password });
+      const res = await axios.post(`https://hallbooking-wk3r.onrender.com/api/users/login`, { email, password });
       login(res.data.token, res.data.isAdmin);
       localStorage.setItem("isAdmin", res.data.isAdmin);
 

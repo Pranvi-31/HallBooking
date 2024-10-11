@@ -4,7 +4,7 @@ import moment from "moment";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { FiLogOut } from 'react-icons/fi';
-import { server } from '../App'; 
+
 
 const AdminPanel = () => {
     const { authToken, logout } = useAuth();
@@ -23,7 +23,7 @@ const AdminPanel = () => {
 
     const fetchBookings = async () => {
         try {
-            const res = await axios.get(`${server}/api/bookings`, {
+            const res = await axios.get(`https://hallbooking-wk3r.onrender.com/api/bookings`, {
                 headers: {
                     Authorization: `Bearer ${authToken}`
                 }
@@ -40,7 +40,7 @@ const AdminPanel = () => {
     const handleStatusChange = async (id, status) => {
         setIsUpdating(true);
         try {
-            await axios.put(`${server}/api/bookings/${id}`, { status }, {
+            await axios.put(`https://hallbooking-wk3r.onrender.com/api/bookings/${id}`, { status }, {
                 headers: {
                     Authorization: `Bearer ${authToken}`
                 }

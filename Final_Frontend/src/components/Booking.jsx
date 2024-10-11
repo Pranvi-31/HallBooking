@@ -4,7 +4,7 @@ import moment from "moment";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import './Home.css'; 
-import { server } from '../App'; 
+
 
 const Booking = () => {
   const { authToken } = useAuth();
@@ -20,7 +20,7 @@ const Booking = () => {
   }, [authToken, navigate]);
 
   const fetchBookings = async () => {
-    const res = await axios.get(`${server}/api/bookings/mybookings`, {
+    const res = await axios.get(`https://hallbooking-wk3r.onrender.com/api/bookings/mybookings`, {
       headers: {
         Authorization: `Bearer ${authToken}`
       }
