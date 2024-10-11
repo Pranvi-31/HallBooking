@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://0.0.0.0/hallBookings", {
+  .connect(" mongodb+srv://notify:123@cluster0.vmfjfpn.mongodb.net/", {
     useNewUrlparser: true,
     useUnifiedTopology: true,
   })
