@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from '../context/AuthContext';
 import './Home.css'; 
 import './customStyles.css';
+import { server } from '../App'; 
+
 
 const AddBooking = () => {
     const [hall, setHall] = useState("LT1");
@@ -28,7 +30,7 @@ const AddBooking = () => {
 
         try {
             await axios.post(
-                "http://localhost:3000/api/bookings",
+                `${server}/api/bookings`,
                 { hall, date, slot: `${startTime}-${endTime}`, notes },
                 {
                     headers: {

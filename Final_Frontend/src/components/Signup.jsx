@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import './Home.css'; 
 import hallLogo from "../assets/hall-logo.svg";
+import { server } from '../App'; 
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -25,7 +26,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:3000/api/users/signup", {
+      const res = await axios.post(`${server}/api/users/signup`, {
         name,
         email,
         password,

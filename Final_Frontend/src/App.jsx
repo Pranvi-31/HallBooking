@@ -31,6 +31,8 @@ const NavBarCustom = () => {
   return (!isAdmin ? <Navbar /> : <div></div>);
 }
 
+export const server = "";
+
 const App = () => {
   return (
       <AuthProvider>
