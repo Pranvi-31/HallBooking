@@ -31,7 +31,7 @@ const NavBarCustom = () => {
   return (!isAdmin ? <Navbar /> : <div></div>);
 }
 
-export const server = "";
+export const server = "https://hallbooking-wk3r.onrender.com";
 
 const App = () => {
   return (
