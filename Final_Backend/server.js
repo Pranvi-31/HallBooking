@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect("mongodb+srv://notify:123@cluster0.vmfjfpn.mongodb.net/", {
+  .connect("mongodb+srv://pranvi_31:sk260670@cluster0.nzz3d.mongodb.net/", {
     useNewUrlparser: true,
     useUnifiedTopology: true,
   })
